@@ -1,0 +1,10 @@
+<div>
+  <h2>Products</h2>
+  <ul class="product-list">
+    <li *ngFor="let p of product">
+      <strong>{{ p.name }}</strong>
+      <span>₹ {{ p.price }}</span>
+      <button [disabled]="isAdded(p)" (click)="addToCart(p)">{{ isAdded(p)? "Added" : "Add to Cart"}}</button>
+    </li>
+  </ul>
+</div>
