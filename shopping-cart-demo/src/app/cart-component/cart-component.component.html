@@ -1,11 +1,16 @@
-<div>
-  <h2>Cart</h2>
-  <ul class="product-list">
-    <li *ngFor="let item of cart">
-      <strong>{{ item.name}}</strong>
-      <span>{{item.price}}</span>
-      <button (click)="removeFromCart(item)">Remove</button>
+<div class="cart-container">
+  <h2>🛒 Your Cart</h2>
+  <ul class="cart-list">
+    <li *ngFor="let item of cart" class="cart-item">
+      <div class="cart-item-info">
+        <strong class="cart-item-name">{{ item.name }}</strong>
+        <span class="cart-item-price">₹ {{ item.price }}</span>
+      </div>
+      <button class="remove-btn" (click)="removeFromCart(item)">✖</button>
     </li>
   </ul>
-  <span>Total: ₹ {{ totalCartPrice()}}</span>
+  <div class="cart-total">
+    <span>Total:</span>
+    <strong>₹ {{ totalCartPrice() }}</strong>
+  </div>
 </div>

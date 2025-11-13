@@ -1,10 +1,17 @@
-<div>
-  <h2>Products</h2>
+<div class="products-container">
+  <h2>🛍️ Products</h2>
   <ul class="product-list">
-    <li *ngFor="let p of product">
-      <strong>{{ p.name }}</strong>
-      <span>₹ {{ p.price }}</span>
-      <button [disabled]="isAdded(p)" (click)="addToCart(p)">{{ isAdded(p)? "Added" : "Add to Cart"}}</button>
+    <li *ngFor="let p of product" class="product-item">
+      <div class="product-info">
+        <strong class="product-name">{{ p.name }}</strong>
+        <span class="product-price">₹ {{ p.price }}</span>
+      </div>
+      <button 
+        class="add-btn" 
+        [disabled]="isAdded(p)" 
+        (click)="addToCart(p)">
+        {{ isAdded(p) ? "✅ Added" : "🛒 Add to Cart" }}
+      </button>
     </li>
   </ul>
 </div>
