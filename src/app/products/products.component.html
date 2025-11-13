@@ -1,0 +1,7 @@
+<ul class="product-list">
+  <li *ngFor="let p of filteredProducts">
+    <strong>{{ p.name }}</strong>  
+    <span>({{ p.category }} - {{ p.gender }})</span>  
+    <span>₹{{ p.price }}</span>
+  </li>
+</ul>

@@ -1,0 +1,21 @@
+<h2>🛍️ Product Catalog</h2>
+
+<div class="filters">
+  <app-filter
+    [type]="gender"
+    [values]="genders"
+    [(selectedValue)]="selectedGender">
+  </app-filter>
+
+  <app-filter
+    [type]="category"
+    [values]="categories"
+    [(selectedValue)]="selectedCategory">
+  </app-filter>
+</div>
+
+<app-products
+  [products]="productList"
+  [selectedGender]="selectedGender"
+  [selectedCategory]="selectedCategory">
+</app-products>

@@ -1,0 +1,11 @@
+<div class="filter">
+  <h3>{{ type }}</h3>
+  <ul>
+    <li
+      *ngFor="let v of values"
+      [class.active]="selectedValue === v"
+      (click)="onSelect(v)">
+      {{ v }}
+    </li>
+  </ul>
+</div>
